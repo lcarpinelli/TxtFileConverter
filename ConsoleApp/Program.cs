@@ -16,7 +16,7 @@ class Program
 
         string filePath = Path.Combine("C:", "Users", "LorenzoCarpinelli", "source", "repos", "ConsoleApp", "ConsoleApp", "file", "test.txt");
         string outputFilePath = Path.Combine("C:", "Users", "LorenzoCarpinelli", "source", "repos", "ConsoleApp", "ConsoleApp", "file", "test.csv");
-        string jsonFilePath = Path.Combine("C:", "Users", "LorenzoCarpinelli", "source", "repos", "ConsoleApp", "ConsoleApp", "file", "prova.json");
+        string jsonFilePath = Path.Combine("C:", "Users", "LorenzoCarpinelli", "source", "repos", "ConsoleApp", "ConsoleApp", "file", "test.json");
         string parquetFilePath = Path.Combine("C:", "Users", "LorenzoCarpinelli", "source", "repos", "ConsoleApp", "ConsoleApp", "file", "test.parquet");
 
         List<string[]> righe = ReadFile(filePath);

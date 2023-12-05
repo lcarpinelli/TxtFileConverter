@@ -1,10 +1,6 @@
-﻿using Apache.Arrow;
-using Mapster;
+﻿using Mapster;
 using Newtonsoft.Json;
-using System.ComponentModel;
 using System.Data;
-using Apache.Arrow.Types;
-using Apache.Arrow.C;
 using ChoETL;
 
 
@@ -85,10 +81,7 @@ class Program
     private static void WriteToParquetFile(List<string[]> righe, string parquetFilePath)
     {
         DataTable dataTable = CreateDataTable(righe);
-
-        using (var w = new ChoParquetWriter(parquetFilePath))
-        {
-            w.Write(dataTable);
-        }
+        using var w = new ChoParquetWriter(parquetFilePath);
+        w.Write(dataTable);
     }
 }
